@@ -17,7 +17,14 @@ export default {
 
 <style lang="css" scoped>
 .flag{
-  height: 150px
+  height: 250px;
+  padding: 1pt;
+  background-color: black;
+}
+
+.country_detail{
+  position: fixed;
+  left: 40%;
 }
 
 .h2 .p {
