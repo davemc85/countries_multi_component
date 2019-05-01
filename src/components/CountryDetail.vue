@@ -19,4 +19,9 @@ export default {
 .flag{
   height: 150px
 }
+
+.h2 .p {
+  font-style: tahoma, sans-serif;
+}
+
 </style>

@@ -1,21 +1,22 @@
 <template lang="html">
   <div>
-    <select class="" name="">
-      <option disabled value="">Select a Country</option>
-      <option v-for="country in countries" :value="country">{{country.name}}</option>
+    <select >
+      <option disabled selected value="">Select a Country</option>
+      <option v-for="(country, index) in countries" :country="country" :key="index">{{country.name}}</option>
     </select>
   </div>
 </template>
 
 <script>
-import ListItem from './ListItem.vue';
+import SelectItem from './SelectItem.vue';
 
 export default {
   name: 'countries-select',
   props: ['countries'],
   components: {
-    "option": ListItem
-  }
+    "select-item": SelectItem
+  },
+
 }
 </script>
 

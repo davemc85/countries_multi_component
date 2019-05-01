@@ -2,15 +2,15 @@
   <div>
     <h1>Countries of the World</h1>
     <div class="main-container">
-      <countries-select :countries='countries'></countries-select>
       <countries-list :countries='countries'></countries-list>
       <country-detail class="country_detail" :country='selectedCountry'></country-detail>
+      <countries-select :countries='countries'></countries-select>
     </div>
   </div>
 </template>
 
 <script>
-// import CountriesSelect from './components/CountriesSelect.vue';
+import CountriesSelect from './components/CountriesSelect.vue';
 import CountryDetail from './components/CountryDetail.vue';
 import CountriesList from './components/CountriesList.vue';
 import { eventBus } from './main.js';
@@ -35,7 +35,8 @@ export default {
   components: {
     "countries-list": CountriesList,
     "country-detail": CountryDetail,
-    // "country-select": CountrySelect
+    "countries-select": CountriesSelect,
+
   }
 }
 </script>
@@ -43,7 +44,7 @@ export default {
 <style lang="css" scoped>
 .main-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
 
